@@ -1,2 +1,2 @@
-datasciencecoursera
+Read me by Igor :-)
 ===================
