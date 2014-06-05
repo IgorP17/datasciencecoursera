@@ -1,0 +1,25 @@
+
+Install git (win -  msysgit)
+
+git config --global user.name "Your Name"
+git config --global user.email "your_email@whatever.com"
+
+
+//cd dir
+git init
+
+git add hello.html
+git commit -m "First Commit"
+
+git status
+
+git commit
+
+git clone http------
+
+
+git push
+
+git pull //get ext changes
+
+
