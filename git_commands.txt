@@ -22,4 +22,4 @@ git push
 
 git pull //get ext changes
 
-
+!!! git add -A - adds new and updated files
