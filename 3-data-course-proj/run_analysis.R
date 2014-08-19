@@ -88,8 +88,8 @@ colnames(wholeMergedData) <- c("Subject","Activity_Id","Activity",as.character(f
 #get names for reqired columns
 #requiredNamesBoolean <- grepl(".*(mean)|(std).*", colnames(wholeMergedData))
 #Get id's of columns
-meanColumns <- grep("mean", colnames(wholeMergedData), fixed=TRUE)
-stdColumns <- grep("std", colnames(wholeMergedData), fixed=TRUE)
+meanColumns <- grep("mean()", colnames(wholeMergedData), fixed=TRUE)
+stdColumns <- grep("std()", colnames(wholeMergedData), fixed=TRUE)
 filteredCols <- c(meanColumns, stdColumns)
 filteredCols <- sort(filteredCols)
 #extract data, 1-3 cols are subject and activity
@@ -108,10 +108,9 @@ print("=== Step 2 - extraction complete ...")
 print("=== Running step 3 ...")
 require(reshape2)
 print("Melting data ...")
-meltedData <- melt(extractedData, id=c("Subject","Activity_Id","Activity"))
+meltedData <- melt(extractedData, id=c("Subject","Activity"))
 ## cast the data back to the tidy data format
-##Actually it seems there are no nessesary in Activity_Id + Activity? Only one?
-tidyData <- dcast(meltedData, formula = Subject + Activity_Id + Activity ~ variable, mean)
+tidyData <- dcast(meltedData, formula = Subject + Activity ~ variable, mean)
 
 ## write the output into a file
 print("Writing file with \t separator ...")
