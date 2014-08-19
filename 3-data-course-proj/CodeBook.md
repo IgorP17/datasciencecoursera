@@ -55,7 +55,7 @@ More details are available in README.md and inside run_analysis.R as comments.
 
 ##Output data:
 Variables:  
-*Subject: Number 1-30, goes from original file
-*Activity: Name of activity, charachter  
-*Activity_Id: Id of activity, numeric
+*Subject: Number 1-30, goes from original file  
+*Activity: Name of activity, charachter    
+*Activity_Id: Id of activity, numeric  
 *All next variables - means or std of features, units as from original data(e.g "Features are normalized and bounded within [-1,1]").
