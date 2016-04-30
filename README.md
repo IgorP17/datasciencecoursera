@@ -1,3 +1,1 @@
-Edited.
-Read me by Igor :-) BYUA!)
-===================
+This is readme file
